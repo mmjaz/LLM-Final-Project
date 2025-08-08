@@ -12,7 +12,7 @@ with open(r"data/pquad/PQuad_json.json", "r", encoding="utf-8") as f:
     gold = json.load(f)
 
 # pathes = list(Path(r"G:\jupyter\pycharm\KG2RAG\output\pquad").glob('*.json'))
-pathes = list(Path("output/pquad").glob('*.json'))
+pathes = list(Path("output/KG2RAG/pquad").glob('*.json'))
 
 
 def extract_number(filepath):

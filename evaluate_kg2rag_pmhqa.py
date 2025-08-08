@@ -12,7 +12,7 @@ with open(r"data/pmhqa/all_persian_mhqa.json", "r", encoding="utf-8") as f:
     gold = json.load(f)
 
 # pathes = list(Path(r"G:\jupyter\pycharm\KG2RAG\output\pmhqa").glob('*.json'))
-pathes = list(Path("output/pmhqa").glob('*.json'))
+pathes = list(Path("output/KG2RAG/pmhqa").glob('*.json'))
 
 
 def extract_number(filepath):
@@ -63,7 +63,7 @@ def extract_number(filepath):
 
 
 sorted_ls = sorted(ls, key=extract_number)
-test_df = pd.read_json("test_data.json", orient='records', encoding="utf-8")
+test_df = pd.read_json("data/test_data.json", orient='records', encoding="utf-8")
 
 numbers_semrag = []
 em_scores_semrag = []
@@ -81,7 +81,7 @@ for p in sorted_ls:
         predictions['answer'][sample_id] = answer
         predictions['sp'][sample_id] = sps
     print(p)
-    res = eval(predictions, "test_data.json")
+    res = eval(predictions, "data/test_data.json")
     print()
     match = re.search(r'_(\d+)\.pickle$', p.name)
     num = int(match.group(1))
