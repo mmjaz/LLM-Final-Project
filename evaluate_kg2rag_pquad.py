@@ -53,7 +53,7 @@ for p in sorted_pathes:
 
 test_df = pd.read_csv("test_df_pquad.csv", encoding="utf-8")
 
-ls = list(Path("./results/pquad/").glob("*.pickle"))
+ls = list(Path("output/SemanticRAG/results/pquad/").glob("*.pickle"))
 
 
 def extract_number(filepath):

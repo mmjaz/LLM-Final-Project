@@ -54,7 +54,7 @@ for p in sorted_pathes:
 
 
 
-ls = list(Path("./results/pmhqa/").glob("*.pickle"))
+ls = list(Path("output/SemanticRAG/results/pmhqa/").glob("*.pickle"))
 
 
 def extract_number(filepath):

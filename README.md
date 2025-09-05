@@ -2,7 +2,7 @@
 This repo contain the codes of implementing HippoRAG and KG2RAG for persian PQUAD and PersianMHQA datasets.
 ## Evaluation Scripts
 Results of Simple Semantic RAG are provided in:
-* `results` folder
+* `output/SemanticRAG/results` folder
 
 Results of KG2RAG are provided in:
 * `output/KG2RAG` folder
